@@ -35,11 +35,12 @@ export default function DataTable(props) {
   const { data } = useSelector((state) => state.counter)
   const dispatch = useDispatch();
 
-
+// handles page change
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
 
+ // handles limit change 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(+event.target.value);
     setPage(0);

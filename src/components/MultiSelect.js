@@ -20,6 +20,7 @@ export default function MultiSelect(props) {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
 
+// handles multi selected values
   const handleChange = (event) => {
     const {
       target: { value },

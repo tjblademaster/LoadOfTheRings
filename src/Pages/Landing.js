@@ -22,6 +22,7 @@ export default function Landing() {
         getCharacter()
     }, [order, race, gender, name])
 
+    //api request
     const getCharacter = () => {
         connect.getCharacter(order, race, gender, name).then((json) => {
             console.log(json.docs)
@@ -30,24 +31,27 @@ export default function Landing() {
         })
     }
 
+    //order sort
     const setOrderType = (order) => {
         if (order === "Descending") {
             setOrder("desc")
         } else { setOrder("asc") }
     }
 
+    //race adjust
     const setRaceType = (race) => {
         if (race !== "") {
             setRace(race.toString())
         } else { setRace("") }
     }
 
+    //gender adjust
     const setGenderType = (gender) => {
         if (gender !== "") {
             setGender(gender)
         } else { setGender("") }
     }
-
+    //name adjust
     const setNameSearch = (name) => {
         if (name !== "") {
             setName(name)

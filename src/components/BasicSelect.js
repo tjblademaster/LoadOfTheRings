@@ -9,6 +9,7 @@ import Select from '@mui/material/Select';
 export default function BasicSelect(props) {
   const [value, setValue] = React.useState('');
 
+  // handles changes
   const handleChange = (event) => {
     setValue(event.target.value);
     props.press(event.target.value)
